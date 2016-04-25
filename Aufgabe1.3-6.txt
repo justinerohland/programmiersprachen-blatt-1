@@ -66,24 +66,23 @@ Unter Signaturvererbung versteht man in der Objektorientierten Programmierung di
 
 #include <iostream>
 
-int var = 3; // var in jedem Funktionsbereich gültig
+int var = 3; //var global gültig
 
-double sum (double a, double b)
+double sum (double a, double b) //sum global gültig
 {
-	return a + b; // a und b nur in diesem Funktionsbereich gültig
+	return a + b; //a und b lokal gültig
 }
 
-int square (int var)
+int square (int var) //square global gültig
 {
-	return var * var;
+	return var * var; //var lokal gültig
 }
 
 int main()
 {
-	for (int i = 0; i != 100; ++1){ //
+	for (int i = 0; i != 100; ++1){ //i lokal gültig
 		std::cout << "i^2 = " << square(i) << std::endl;
 		std::cout << "i+i = " << sum (i,i) << std::endl;
 	}
 	return 0;
 }
-
