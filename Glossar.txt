@@ -1,0 +1,59 @@
+Glossar
+
+C++: C++ ist eine von der ISO genormte Programmiersprache. Sie wurde ab 1979 von Bjarne Stroustrup bei AT&T als Erweiterung der Programmiersprache C entwickelt. C++ ermöglicht sowohl die effiziente und maschinennahe Programmierung als auch eine Programmierung auf hohem Abstraktionsniveau. Der Standard definiert auch eine Standardbibliothek, zu der verschiedene Implementierungen existieren.
+
+Quellcode: Unter dem Begriff auch Quellcode (englisch source code) oder unscharf Programmcode genannt, wird in der Informatik der für Menschen lesbare, in einer Programmiersprache geschriebene Text eines Computerprogrammes verstanden.
+
+Compiler: Ein Compiler ist ein Programm, das Quellcode einer bestimmten Programmiersprache in eine Form übersetzt, die von einem Computer (direkter) ausgeführt werden kann.
+
+Linker: Unter einem Linker oder Binder versteht man ein Programm, das einzelne Programmmodule zu einem ausführbaren Programm zusammenstellt (verbindet). Die meisten Programme enthalten Bestandteile oder Module, die in anderen Programmen Verwendung finden können. Mehrere kompilierte Module mit Funktionen (so genannte Objektdateien) können zu Funktionsbibliotheken (Programmbibliotheken) zusammengefasst werden. Der Code wird durch den Linker zum Hauptprogramm hinzugefügt, falls die entsprechende Funktion benötigt wird.
+
+Objektcode: Objektcode ist ein Zwischenergebnis eines Compiler- bzw. Übersetzungsvorgangs von einem Computerprogramm. Einfache Compiler können diesen Schritt überspringen. Der Objektcode besteht hauptsächlich aus Maschinencode für die Architektur, für die das Programm übersetzt wurde. Er enthält üblicherweise kompakten und vorgeparsten Code und oft benutzte Programmbibliotheken, die dann mit anderen Objektdateien gebunden werden.
+
+Ausführbare Datei: Als ausführbare Datei (auch Programmdatei) bezeichnet man eine Datei, die als Programm ausgeführt werden kann. Hierbei kann es sich um eine Binärdatei in Maschinensprache oder um eine Bytecode-Datei handeln (Binärprogramm), die direkt oder durch ein Laufzeitsystem ausgeführt werden kann, oder um eine Textdatei, die von einer Betriebssystem-Shell interpretiert wird.
+
+main(): Jedes C++ Programm muss eine Funktion mit dem Namen main(...) enthalten und diese Funktion definiert den Einsprungspunkt in das Programm.
+
+#include: Die Direktive #include fügt andere, benannte Dateien (Include-Dateien), in das Quellprogramm ein. Dabei handelt es sich meist um Header-Dateien. / Weist den Präprozessor an, den Inhalt einer angegebenen Datei so zu behandeln, als ob dieser im Quellprogramm an demselben Punkt wie die Direktive auftreten würde. 
+
+Kommentar: wird mit // an eine Zeile o. Abschnitt eines Programmcodes angefügt um etwas zu erklären/verdeutlichen
+
+Header: Headerdateien sind gewöhnliche C++-Dateien, die im Normalfall Funktionsdeklarationen und Ähnliches enthalten. Das Einbinden einer Headerdatei erfolgt über die Präprozessordirektive #include. Der Code in der Datei die mit include referenziert wird, wird vom Präprozessor einfach an der Stelle eingefügt, an der das include stand.
+
+Programm: Ein Programm ist eine den Regeln einer bestimmten Programmiersprache genügende Folge von Anweisungen (bestehend aus Deklarationen und Instruktionen), um bestimmte Funktionen bzw. Aufgaben oder Probleme mithilfe eines Computers zu bearbeiten oder zu lösen
+
+Ausgabe:
+
+std::cout: Für die Ausgabe auf die Standardausgabe, dies ist in der Regel der Bildschirm, wird das Ausgabestream-Objekt cout verwendet. 
+
+std::cin: Für die Standard-Eingabe, in der Regel ist dies die Tastatur, wird in C++ Programme vorzugsweise den Eingabestream cin verwendet. Genauso wie der Ausgabestream cout, ist auch der Eingabestream cin eine Instanz einer Streamklasse und liegt im Namensraum std. Wenn dieser Stream verwendet wird, ist die Datei iostream einzubinden.
+
+<<: Mit dem Ausgabeoperator << ist es möglich, beliebig viele Teile der Ausgabe aneinanderzuhängen, die sich auch auf mehrere Zeilen verteilen dürfen.
+
+>>: Eingabeoperator
+
+Funktion: Eine Funktion ist eine Ansammlung von Anweisungen, der ein Name gegeben wird und die jederzeit im Programm über diesen Namen aufgerufen und ausgeführt werden kann.
+
+Funktionssignatur: Eine Signatur (oder Methodensignatur) definiert in der Programmierung die formale Schnittstelle einer Funktion oder Prozedur. Sie besteht aus dem Namen der Funktion und der Anzahl und Reihenfolge der zuweisungskompatiblen Parameterdatentypen. Der Typ des Rückgabewerts gehört bei streng strukturierten Programmiersprachen ebenfalls zur Signatur.
+
+Deklaration: Mit der Deklaration einer Variablen wird der Typ der Variablen (z.B. der Datentyp int für ganze Zahlen) festgelegt und der namentliche Bezeichner für diese Variable. Eine korrekte Deklaration ist vor allem für den Compiler von Bedeutung, denn dieser muss wissen, wie der im Speicher abgelegte Wert zu interpretieren ist.
+
+Definition: Mit der Definition wird der erforderliche Speicherplatz für eine Variable reserviert. Eine korrekte Definition ist vor allem für den Linker von Bedeutung.
+
+Typ: Der Datentyp bestimmt den Wertebereich der Variable und damit auch indirekt den Speicherplatz (Anzahl Bytes) den eine Variable belegt. Je mehr Speicher die Variable belegt, umso größer kann der in ihr abzulegende Wert prinzipiell sein.
+
+Typkonvertierung: Anfangs wird der Typ einer Variablen bei der Deklaration ein für allemal festgelegt. Gelegentlich ist es jedoch notwendig, einen Wert (implizit oder explizit) von einem Typ in einen anderen zu konvertieren. Hierfür gibt es verschiedene Verfahren der Typkonvertierung (cast).
+
+Variable: Zur Programmlaufzeit veränderbare Daten werden in sogenannten Variablen abgelegt. Einer Variable können beliebig oft Werte zuweisen werden, der bisherige Wert wird dann einfach überschrieben.
+
+Name: Jede Variable und Konstante hat einen Namen (Bezeichner, identifier).
+
+Wert: Variablen werden mit Werten Initialisiert.
+
+Initialisierung: Bei einer Initalisierung werden zunächst Variablen von einem bestimmten Typ deklariert und es werden ihnen Werte zugewiesen (was aber nicht sofort geschehen muss).
+
+Zuweisung: Bei der Initialisierung erfolgt die Zuweisung des rechts stehenden Operanden (Anfangswert) zum links stehen Operanden (Bezeichner der Variablen) durch einen Zuweisungsoperator (=). Statt einer Initialisierung durch einen einzelnen Anfangswert, kann einer Variablen ein berechneter Wert von anderen Speicheradressen zugewiesen werden.
+
+const: teilt dem Compiler mit, dass ein deklariertes Objekt, oder eine deklarierte Variable nicht veränderbar ist, ist also eine Konstante
+
+Gültigkeitsbereich: Der Gültigkeitsbereich entscheidet darüber, ob eine Variable zum Beispiel nur innerhalb einer Funktion existiert oder ob noch in weiteren Funktionen auf diese Variable zugegriffen werden kann.

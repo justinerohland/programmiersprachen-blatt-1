@@ -1,0 +1,89 @@
+Aufgabe 1.3
+
+int main()
+{
+	int 		a = 9;
+	bool 		b = false;
+	char 		c = 'a';
+	double 		d = 1.3;
+	int const 	two = 2;
+	double 		e = a/two; //?
+
+	two = d; //?
+
+	return 0;
+}
+
+Typen:	ganzzahliger Typ "int" (speichert ganze Zahlen in verschiedenen Wertebereichen; ohne nähere Angabe oder mit signed sind die Werte 		  vorzeichenbehaftet, mit unsigned hingegen vorzeichenlos)
+		
+		boolescher Typ "bool" (nimmt lediglich die booleschen Werte wahr (true) und falsch (false) an; bei Umwandlung in eine Zahl werden die beiden Wahrheitswerte als 1 bzw. 0 dargestellt)
+		
+		Zeichentyp "char" (speichert typischerweise einzelne Zeichen wie z.B. 'A' oder '#', wobei es neben dem unspezifischen char auch die vorzeichenlose Variante unsigned char und die vorzeichenbehaftete signed char gibt; streng genommen handelt es sich bei diesem Typ um „sehr kleine Zahlen“ (z.B. mit dem Wertebereich -128...+127 oder 0...255))
+
+		Fließkommatyp "double" (dient zur Speicherung von Fließkommazahlen mit verschiedener Genauigkeit, double = doppelte Genauigkeit)
+
+Variablen: a, b, c, d, Konstante two, e
+
+Werte: 9, false (0), 'a', 1.3, 2, a/two, d
+
+
+Das Schlüsselwort "const" teilt dem Compiler mit, dass ein deklariertes Objekt, oder eine deklarierte Variable nicht veränderbar ist, ist also eine Konstante. In diesem Beispiel wird sie auf two = 2 festgelegt.
+
+Typkonvertierung: Anfangs wird der Typ einer Variablen bei der Deklaration ein für allemal festgelegt. Gelegentlich ist es jedoch notwendig, einen Wert (implizit oder explizit) von einem Typ in einen anderen zu konvertieren. Hierfür gibt es verschiedene Verfahren der Typkonvertierung (cast).
+
+Aufgabe 1.4
+
+Initalisierung: Bei einer Initalisierung werden zunächst Variablen von einem bestimmten Typ deklariert und es werden ihnen Werte zugewiesen (was aber nicht sofort geschehen muss).
+// Initialisierung
+int a = 1, b = 2, c = a + b;
+
+Zuweisung: Bei der Initialisierung erfolgt die Zuweisung des rechts stehenden Operanden (Anfangswert) zum links stehen Operanden (Bezeichner der Variablen) durch einen Zuweisungsoperator (=). Statt einer Initialisierung durch einen einzelnen Anfangswert, kann einer Variablen ein berechneter Wert von anderen Speicheradressen zugewiesen werden. 
+
+
+Aufgabe 1.5
+
+Eine Deklaration legt den Namen und den Typ einer Variablen fest, während eine Definition darüberhinaus Speicherplatz für die Variable reserviert. (Jede Definition ist also eine Deklaration, aber nicht umgekehrt.) Eine Definition ist eine eindeutige Spezifikation eines Objekts oder einer Variable, Funktion, Klasse oder eines Enumerators. Da Definitionen eindeutig sein müssen, kann ein Programm nur eine Definition für ein gegebenes Programmelement enthalten. Es kann eine n:1-Zuordnung zwischen Deklarationen und Definitionen vorgenommen werden.
+
+Bsp. Deklaration:
+Das folgende Beispiel in der Programmiersprache C deklariert und definiert die Variable x mit dem Datentyp int.
+
+  int x;
+
+Im nächsten Beispiel bewirkt das Schlüsselwort extern, dass die Variable y nur deklariert, aber nicht definiert wird. Die Definition muss an einer anderen Stelle in derselben oder einer anderen Quelltext-Datei erfolgen.
+
+  extern int y;
+
+Bsp. Definition:
+
+
+Aufgabe 1.6
+
+Eine Signatur (oder Methodensignatur) definiert in der Programmierung die formale Schnittstelle einer Funktion oder Prozedur. Sie besteht aus dem Namen der Funktion und der Anzahl und Reihenfolge der zuweisungskompatiblen Parameterdatentypen. Der Typ des Rückgabewerts gehört bei streng strukturierten Programmiersprachen ebenfalls zur Signatur.
+
+Auch die Menge der Operatoren eines abstrakten Datentyps wird Signatur genannt.
+
+Unter Signaturvererbung versteht man in der Objektorientierten Programmierung die Übertragung einer in der Oberklasse definierten (und eventuell implementierten) Methode auf die Unterklasse.
+
+#include <iostream>
+
+int var = 3; // var in jedem Funktionsbereich gültig
+
+double sum (double a, double b)
+{
+	return a + b; // a und b nur in diesem Funktionsbereich gültig
+}
+
+int square (int var)
+{
+	return var * var;
+}
+
+int main()
+{
+	for (int i = 0; i != 100; ++1){ //
+		std::cout << "i^2 = " << square(i) << std::endl;
+		std::cout << "i+i = " << sum (i,i) << std::endl;
+	}
+	return 0;
+}
+
